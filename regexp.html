@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <!--
+        Author: Ryan Corrigan
+        Class: Software Engineering
+        Project: RegExp Tester
+        Descript: This is a RegExp tester to test regular expressions
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <title>RegExp Test</title>
+        <style>
+            body {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            input {
+                text-align: right;
+            }
+        </style>
+        <script>
+            function regExpTest() {
+                string = document.getElementById("string").value;
+                regexp = new RegExp(document.getElementById("regexp").value);
+
+                document.getElementById("result").value = regexp.test(string);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>RegExp Test</h1>
+
+        <p>This is a way to test Regular Expressions using a web application</p>
+        <p>In the first box is where you should place your string and in the second spot is 
+            where you place your RegExp. </p> 
+        <p>Then click the button to see the results!</p>
+        
+        Enter your String here: <input id="string" type="text" value="" size="20"><br><br>
+        Enter your RegExp here: <input id="regexp" type="text" value="" size="5"><br><br>
+        <button type="button" onclick="regExpTest()">Test</button><br/><br/>
+        Result: <input id="result" type="text" value="" size="5" disabled>
+    </body>
+</html>
